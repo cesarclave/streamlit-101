@@ -41,7 +41,7 @@ st.title("Time Series Analysis")
 
 # Display a time series graph using plotly express
 fig = px.line(
-    grouped_data, x='Date', y=metric, title=f"{metric} Spending over Time ({time_frequency})"
+    grouped_data, x='Date', y='metric', title=f"{metric} Spending over Time ({time_frequency})"
 )
 
 # Customize chart appearance using Plotly Express options (optional)
