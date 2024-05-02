@@ -7,10 +7,11 @@ st.set_page_config(page_title="Suivi compate bancaire",
                    layout="wide")
 
 df = pd.read_csv("data.csv")
-df['Date'] = pd.to_datetime(df['Date']).dt.date
+df['Date'] = pd.to_datetime(df['Date'])
+df['Crédit/Débit'].mask( df['Montant (EUR)'] > 0, 'Crédit' , inplace=True )
+df['Crédit/Débit'].mask( df['Montant (EUR)'] < 0, 'Débit' , inplace=True )
 
-# ----- SIDEBAR -----
-
+# 
 st.sidebar.header("Choisir un filtre: ")
 
 category = st.sidebar.multiselect(
@@ -19,11 +20,23 @@ category = st.sidebar.multiselect(
         default=df["Catégorie"].unique()
         )
 
-# operation_type = st.sidebar.multiselect(
-#         "Choisir le type d'opération:" ,
-#         options=df["Type d'opération"].unique(),
-#         default=df["Type d'opération"].unique()
-#         )
+sub_category = st.sidebar.multiselect(
+        "Choisir la sous catégorie" ,
+        options=df["Sous-Catégorie"].unique(),
+        default=df["Sous-Catégorie"].unique()
+        )
+
+credit_debit = st.sidebar.multiselect(
+        "Crédit/Débit" ,
+        options=df["Crédit/Débit"].unique(),
+        default=df["Crédit/Débit"].unique()
+        )
+
+operation_type = st.sidebar.multiselect(
+        "Choisir le type d'opération:" ,
+        options=df["Type d'opération"].unique(),
+        default=df["Type d'opération"].unique()
+        )
 
 # target = st.sidebar.multiselect(
 #         "Choisir le Bénéficiare/Débiteur:" ,
@@ -31,7 +44,16 @@ category = st.sidebar.multiselect(
 #         default=df["Bénéficiaire/Débiteur"].unique()
 #         )
 
-df_selection = df.query("Catégorie == @category")
+# sub_category = st.sidebar.multiselect(
+#         "Choisir le Bénéficiare/Débiteur:" ,
+#         options=df["Bénéficiaire/Débiteur"].unique(),
+#         default=df["Bénéficiaire/Débiteur"].unique()
+#         )
+
+df_selection = df.query("Catégorie == @category & \
+                        `Sous-Catégorie` == @sub_category & \
+                        `Crédit/Débit` == @credit_debit & \
+                        `Type d'opération` == @operation_type") #`a b`
 
 st.dataframe(df_selection)
 
@@ -71,15 +93,6 @@ fig_product_sales = px.bar(
 st.plotly_chart(fig_product_sales)
 
 # ------ Date ------
-# daily_spend = df.groupby(pd.Grouper(freq='D')).sum()
-
-# fig_daily_spend = px.line(daily_spend, y='Montant (EUR)', title='Total Daily Spend')
-# st.plotly_chart(fig)
-
-
-# fig_daily_spend = px.line(pd.DataFrame(daily_spend).reset_index(), x='Date', y='Montant (EUR)', title='Total Daily Spend')
-# st.plotly_chart(fig_daily_spend)
-# daily_spend = df_selection.resample('D', on='Date')['Montant (EUR)'].sum()
-# fig_daily_spend = px.line(pd.DataFrame(daily_spend).reset_index(), x='Date', y='Montant (EUR)', title='Total Daily Spend')
-
-# st.plotly_chart(fig_daily_spend)
+df_daily_total = df_selection[['Date','Montant (EUR)']].groupby(pd.Grouper(key="Date", freq="D")).sum().reset_index()
+fig_daily_total = px.line(df_daily_total, x='Date', y="Montant (EUR)")
+st.plotly_chart(fig_daily_total)

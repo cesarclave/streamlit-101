@@ -1,34 +1,34 @@
-Date,Bénéficiaire/Débiteur,Montant (EUR),Type d'opération,Catégorie
-2024-04-25,Supermarché Carrefour, -32.50, Carte de débit, Courses
-2024-04-24,Salaire, 2000.00, Dépôt, Salaire
-2024-04-23,Restaurant La Belle Assiette, -45.70, Carte de débit, Sortie restaurant
-2024-04-23,E.Leclerc, -120.45, Carte de débit, Courses
-2024-04-22,Netflix, -10.99, Carte de débit, Divertissement
-2024-04-20,EDF, -58.32, Prélèvement automatique, Energie
-2024-04-19,TotalEnergies, -62.14, Prélèvement automatique, Energie
-2024-04-18,Remboursement d'ami, 100.00, Dépôt, Virement
-2024-04-17,Amazon, -35.99, Carte de débit, Achats
-2024-04-16,Cinéma, -12.00, Carte de débit, Divertissement
-2024-04-15,Paiement cantine, -45.00, Prélèvement automatique, Cantine scolaire
-2024-04-13,FNAC, -78.99, Carte de débit, Electronique
-2024-04-12,Dépôt DAB, 250.00, Dépôt, DAB
-2024-04-11,Intermarché, -98.20, Carte de débit, Courses
-2024-04-10,Facture téléphone, -35.00, Prélèvement automatique, Téléphone
-2024-04-09,Paiement pour services, -150.00, Carte de débit, Services professionnels
-2024-04-08,Versement sécurité sociale, 1250.00, Dépôt, Prestation sociale
-2024-04-06,Restaurant Le Petit Coq, -28.10, Carte de débit, Sortie restaurant
-2024-04-05,Air France, -250.00, Carte de débit, Voyage
-2024-04-04,Retrait espèces DAB, -50.00, Retrait, DAB
-2024-04-03,Bricomarché, -185.20, Carte de débit, Bricolage
-2024-04-02,Boulangerie, -7.50, Carte de débit, Courses
-2024-04-01,Paiement du loyer, -750.00, Prélèvement automatique, Loyer
-2024-03-31,Virement à frère, -30.00, Virement, Famille
-2024-03-30,Frais bancaires, -5.00, Débit, Frais
-2024-03-29,Abonnement Spotify, -9.99, Carte de débit, Divertissement
-2024-03-28,Restaurant Asia Wok, -38.50, Carte de débit, Sortie restaurant
-2024-03-27,Supermarché Auchan, -42.80, Carte de débit, Courses
-2024-03-26,Paiement d'intérêts, 2.10, Crédit, Intérêts
-2024-03-25,Salaire, 2000.00, Dépôt, Salaire
-2024-03-24,Paiement dentiste, -120.00, Carte de débit, Soins médicaux
-2024-03-23,Recharge téléphone, -20.00, Virement, Téléphone
-2024-03-22,Assurance voiture, -150.00, Prélèvement automatique, Assurance
+Date,Bénéficiaire/Débiteur,Crédit/Débit,Montant (EUR),Type d'opération,Catégorie,Sous-Catégorie
+2024-04-25,Supermarché Carrefour,, -32.50, Carte de débit,Courses, Courses
+2024-04-24,Salaire,, 2000.00, Dépôt,, Salaire
+2024-04-23,Restaurant La Belle Assiette,, -45.70, Carte de débit,Frais exceptionnels, Sortie restaurant
+2024-04-23,E.Leclerc,, -120.45, Carte de débit,Courses, Courses
+2024-04-22,Netflix,, -10.99, Carte de débit,Frais Courants, Divertissement
+2024-04-20,EDF,, -58.32, Prélèvement automatique,Factures, Energie
+2024-04-19,TotalEnergies,, -62.14, Prélèvement automatique,Factures, Energie
+2024-04-18,Remboursement d'ami,, 100.00, Dépôt,Frais exceptionnels, Virement
+2024-04-17,Amazon,, -35.99, Carte de débit,Frais Courants, Achats
+2024-04-16,Cinéma,, -12.00, Carte de débit,Frais exceptionnels, Divertissement
+2024-04-15,Paiement cantine,, -45.00, Prélèvement automatique,Frais Courants, Cantine scolaire
+2024-04-13,FNAC,, -78.99, Carte de débit,Frais exceptionnels, Electronique
+2024-04-12,Dépôt DAB,, 250.00, Dépôt,, DAB
+2024-04-11,Intermarché,, -98.20, Carte de débit,Courses, Courses
+2024-04-10,Facture téléphone,, -35.00, Prélèvement automatique,Factures, Téléphone
+2024-04-09,Paiement pour services,, -150.00, Carte de débit,Factures, Services professionnels
+2024-04-08,Versement sécurité sociale,, 1250.00, Dépôt,, Prestation sociale
+2024-04-06,Restaurant Le Petit Coq,, -28.10, Carte de débit,Frais exceptionnels, Sortie restaurant
+2024-04-05,Air France,, -250.00, Carte de débit,Frais exceptionnels, Voyage
+2024-04-04,Retrait espèces DAB,, -50.00, Retrait,Frais exceptionnels, DAB
+2024-04-03,Bricomarché,, -185.20, Carte de débit,Frais exceptionnels, Bricolage
+2024-04-02,Boulangerie,, -7.50, Carte de débit,Frais Courants, Courses
+2024-04-01,Paiement du loyer,, -750.00, Prélèvement automatique,Factures, Loyer
+2024-03-31,Virement à frère,, -30.00, Virement,Frais exceptionnels, Famille
+2024-03-30,Frais bancaires,, -5.00, Débit,Factures, Frais
+2024-03-29,Abonnement Spotify,, -9.99, Carte de débit,Factures, Divertissement
+2024-03-28,Restaurant Asia Wok,, -38.50, Carte de débit,Frais exceptionnels, Sortie restaurant
+2024-03-27,Supermarché Auchan,, -42.80, Carte de débit,Courses, Courses
+2024-03-26,Paiement d'intérêts,, 2.10, Crédit,, Intérêts
+2024-03-25,Salaire,, 2000.00, Dépôt,, Salaire
+2024-03-24,Paiement dentiste,, -120.00, Carte de débit,Frais exceptionels, Soins médicaux
+2024-03-23,Recharge téléphone,, -20.00, Virement,Factures, Téléphone
+2024-03-22,Assurance voiture,, -150.00, Prélèvement automatique,Factures, Assurance
